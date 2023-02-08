@@ -154,3 +154,28 @@ body{
     z-index: -1;
   }
 }
+
+.works_culture{
+  padding: 80px 170px 0 170px;
+  .works_culture_content{
+    display: flex;
+    justify-content: space-between;
+    .works h1, .culture h1{
+      font-size: 2.3rem;
+      margin-bottom: 30px;
+    }
+    .works p, .culture p{
+      margin: 25px 0;
+      font-size: 1.2rem;
+    }
+    .read_more_btn{
+      border-radius: 4px;
+      width: 160px;
+      background: black;
+      color: white;
+      display: block;
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+}
