@@ -178,4 +178,39 @@ body {
   display: block;
   padding: 10px 0;
   text-align: center;
+}
+
+.latest_topics {
+  padding: 120px 170px 60px 170px;
+}
+.latest_topics .latest_topics_title {
+  font-size: 2.1rem;
+  margin-bottom: 32px;
+}
+.latest_topics .topics {
+  width: 700px;
+  text-align: left;
+  margin-left: auto;
+}
+.latest_topics .topics .date {
+  font-family: "Zen Kaku Gothic New";
+  color: #999999;
+  margin-bottom: 14px;
+  font-size: 0.8rem;
+}
+.latest_topics .topics .topic_content {
+  padding-bottom: 5px;
+  font-weight: bold;
+  border-bottom: 1px solid #cacaca;
+  margin-bottom: 32px;
+}
+.latest_topics .read_more_btn {
+  margin-left: auto;
+  border-radius: 4px;
+  width: 160px;
+  background: black;
+  color: white;
+  display: block;
+  padding: 10px 0;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
