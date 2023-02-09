@@ -213,4 +213,42 @@ body {
   display: block;
   padding: 10px 0;
   text-align: center;
+}
+
+.contact {
+  padding: 60px 170px 120px 170px;
+  background: #F0F0F0;
+  display: flex;
+  justify-content: space-between;
+}
+.contact .contact_left {
+  width: 440px;
+  padding: 70px 0;
+}
+.contact .contact_left h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+.contact .contact_left P {
+  margin-bottom: 30px;
+  line-height: 34px;
+}
+.contact .contact_left a {
+  border-radius: 4px;
+  width: 160px;
+  background: black;
+  color: white;
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer p {
+  text-align: center;
+  padding: 20px 0;
+  background: #525252;
+  color: white;
+  font-family: "Zen Kaku Gothic New";
+  font-size: 0.8rem;
 }/*# sourceMappingURL=style.css.map */
