@@ -13,12 +13,14 @@ body {
   width: 74px;
   margin-left: auto;
   display: flex;
+  z-index: 6;
 }
 .header .menu .hanburger_menu {
   display: block;
   width: 30px;
   height: 20px;
   position: relative;
+  cursor: pointer;
   transition: 0.5s;
 }
 .header .menu .hanburger_menu span {
@@ -30,18 +32,81 @@ body {
 }
 .header .menu .hanburger_menu span:nth-child(1) {
   top: 4px;
+  transition: 0.5s;
 }
 .header .menu .hanburger_menu span:nth-child(2) {
   top: 10px;
+  transition: 0.5s;
 }
 .header .menu .hanburger_menu span:nth-child(3) {
   top: 16px;
+  transition: 0.5s;
+}
+.header .menu .hanburger_menu.active span:nth-child(1) {
+  transform: translateY(5px) rotate(35deg);
+  transition: 0.5s;
+}
+.header .menu .hanburger_menu.active span:nth-child(2) {
+  opacity: 0;
+  transition: 0.5s;
+}
+.header .menu .hanburger_menu.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(145deg);
+  transition: 0.5s;
 }
 .header .menu p {
   line-height: 24px;
   height: 30px;
   color: white;
   margin-left: 16px;
+}
+.header .mask_menu {
+  position: fixed;
+  width: 520px;
+  right: 0;
+  z-index: 5;
+  height: 100%;
+  top: 0;
+  background: rgba(34, 34, 34, 0.968627451);
+  text-align: center;
+  color: white;
+  padding-top: 180px;
+  pointer-events: none;
+  transform: translateX(1000px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.header .mask_menu img {
+  margin-bottom: 19px;
+}
+.header .mask_menu ul {
+  font-size: 1.25rem;
+}
+.header .mask_menu ul li {
+  margin-bottom: 15px;
+  letter-spacing: 2.3px;
+}
+.header .mask_menu.active {
+  transform: translateX(0px);
+  opacity: 1;
+  transition: 0.5s;
+  pointer-events: visible;
+}
+.header .mask {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+}
+.header .mask.active {
+  opacity: 1;
+  z-index: 4;
+  pointer-events: visible;
 }
 
 .mainvisual {

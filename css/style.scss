@@ -1,3 +1,5 @@
+@use 'fadein' as *;
+
 body{
   font-family: 'Bebas Neue', 'Zen Kaku Gothic New', sans-serif, cursive;
 }
@@ -12,11 +14,13 @@ body{
     width: 74px;
     margin-left: auto;
     display: flex;
+    z-index: 6;
     .hanburger_menu{
       display: block;
       width: 30px;
       height: 20px;
       position: relative;
+      cursor: pointer;
       transition: .5s;
       span{
         width: 30px;
@@ -26,14 +30,29 @@ body{
         left: 3px;
         &:nth-child(1){
           top: 4px;
+          transition: .5s;
         }
         &:nth-child(2){
           top: 10px;
+          transition: .5s;
         }
         &:nth-child(3){
           top: 16px;
+          transition: .5s;
         }
       }
+    }
+    .hanburger_menu.active span:nth-child(1){
+      transform: translateY(5px) rotate(35deg);
+      transition: .5s;
+    }
+    .hanburger_menu.active span:nth-child(2){
+      opacity: 0;
+      transition: .5s;
+    }
+    .hanburger_menu.active span:nth-child(3){
+      transform: translateY(-7px) rotate(145deg);
+      transition: .5s;
     }
     p{
       line-height: 24px;
@@ -41,6 +60,50 @@ body{
       color: white;
       margin-left: 16px;
     }
+  }
+  .mask_menu{
+    position: fixed;
+    width: 520px;
+    right: 0;
+    z-index: 5;
+    height: 100%;
+    top: 0;
+    background: #222222f7;
+    text-align: center;
+    color: white;
+    padding-top: 180px;
+    pointer-events: none;
+    @include fadein(translateX(1000px), 0, .5s);
+    img{
+      margin-bottom: 19px;
+    }
+    ul{
+      font-size: 1.25rem;
+      li{
+        margin-bottom: 15px;
+        letter-spacing: 2.3px;
+      }
+    }
+  }
+  .mask_menu.active{
+    @include fadein(translateX(0px), 1, .5s);
+    pointer-events: visible;
+  }
+  .mask{
+    position: fixed;
+    background: #00000066;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+  }
+  .mask.active{
+    opacity: 1;
+    z-index: 4;
+    pointer-events: visible;
   }
 }
 
