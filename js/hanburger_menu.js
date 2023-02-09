@@ -15,40 +15,19 @@ window.addEventListener('load', () => {
     mask_menu.classList.toggle('active')
     mask.classList.toggle('active')
   });
-  
-  mask.addEventListener('click', () => {
-    hanburger_menu.classList.remove('active')
-    mask_menu.classList.remove('active')
-    mask.classList.remove('active')
-  });
-  
-  about.addEventListener('click', () => {
-    hanburger_menu.classList.remove('active')
-    mask_menu.classList.remove('active')
-    mask.classList.remove('active')
-  });
-  
-  works.addEventListener('click', () => {
-    hanburger_menu.classList.remove('active')
-    mask_menu.classList.remove('active')
-    mask.classList.remove('active')
-  });
-  
-  culture.addEventListener('click', () => {
-    hanburger_menu.classList.remove('active')
-    mask_menu.classList.remove('active')
-    mask.classList.remove('active')
-  });
-  
-  topics.addEventListener('click', () => {
-    hanburger_menu.classList.remove('active')
-    mask_menu.classList.remove('active')
-    mask.classList.remove('active')
-  });
-  
-  contact.addEventListener('click', () => {
-    hanburger_menu.classList.remove('active')
-    mask_menu.classList.remove('active')
-    mask.classList.remove('active')
-  });
+
+  element_remove(mask, hanburger_menu, mask_menu, mask);
+  element_remove(about, hanburger_menu, mask_menu, mask);
+  element_remove(works, hanburger_menu, mask_menu, mask);
+  element_remove(culture, hanburger_menu, mask_menu, mask);
+  element_remove(topics, hanburger_menu, mask_menu, mask);
+  element_remove(contact, hanburger_menu, mask_menu, mask);
+
+  function element_remove(element, hanburger_menu, mask_menu, mask){
+    element.addEventListener('click', () => {
+      hanburger_menu.classList.remove('active')
+      mask_menu.classList.remove('active')
+      mask.classList.remove('active')
+    });
+  }
 });
