@@ -411,4 +411,104 @@ body {
 .company .company_container_top .company_container_top_detail .company_container_top_part p:last-of-type {
   width: 28%;
   padding-bottom: 10px;
+}
+
+.contact_container {
+  padding: 0 370px;
+  margin: 120px 0;
+}
+.contact_container .contact_description {
+  margin-bottom: 55px;
+}
+.contact_container .form_part_checkbox {
+  margin: 15px 0px 40px 0;
+  display: flex;
+}
+.contact_container .form_part_checkbox .contact_container_part, .contact_container .form_part_checkbox .contact_container_part2 {
+  width: 15%;
+}
+.contact_container .form_part_checkbox .contact_container_part input, .contact_container .form_part_checkbox .contact_container_part2 input {
+  margin-right: 9px;
+}
+.contact_container .form_part_checkbox .contact_container_part2 {
+  width: 33%;
+}
+.contact_container .form_part {
+  display: flex;
+  flex-direction: column;
+}
+.contact_container .form_part label {
+  margin-bottom: 6px;
+  position: relative;
+}
+.contact_container .form_part input {
+  height: 41px;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin-bottom: 26px;
+}
+.contact_container .form_part_text {
+  display: flex;
+  flex-direction: column;
+}
+.contact_container .form_part_text label {
+  margin-bottom: 6px;
+  position: relative;
+}
+.contact_container .form_part_text textarea {
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 252px;
+  font-size: 0.875rem;
+  padding: 8px;
+  text-align: left;
+}
+.contact_container .form_part_privaly {
+  flex-direction: row;
+  margin: 40px 0;
+  height: 21px;
+  justify-content: center;
+  display: flex;
+}
+.contact_container .form_part_privaly input {
+  height: 24px;
+  margin-right: 17px;
+  margin-bottom: 26px;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+.contact_container .form_part_privaly span {
+  line-height: normal;
+}
+.contact_container .contact_submit {
+  width: 160px;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 9px;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+}
+
+.required {
+  position: absolute;
+  font-size: 0.7rem;
+  background: black;
+  color: white;
+  padding: 3px 6px 1px 6px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.required.part1 {
+  margin-left: 116px;
+}
+
+.required.part2 {
+  margin-left: 53px;
+}
+
+.required.part3 {
+  margin-left: 135px;
 }/*# sourceMappingURL=style.css.map */

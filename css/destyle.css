@@ -255,9 +255,6 @@ button,
 button:disabled,
 [type="button"]:disabled,
 [type="reset"]:disabled,
-[type="submit"]:disabled {
-  cursor: default;
-}
 
 /**
  * Improve outlines for Firefox and unify style with input elements & buttons.
@@ -333,6 +330,14 @@ textarea {
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+input[type=checkbox]
+{
+  -webkit-appearance:checkbox;
+}
+input[type=radio]
+{
+  -webkit-appearance:checkbox;
+}
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -340,7 +345,6 @@ textarea {
  */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
 
