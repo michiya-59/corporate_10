@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
   const vision_menu = document.getElementById('vision_menu');
   const ceo_message_menu = document.getElementById('ceo_message_menu');
   const company_menu = document.getElementById('company_menu');
+  const top = document.getElementById('top');
 
   hanburger_menu.addEventListener('click', () => {
     hanburger_menu.classList.toggle('active')
@@ -28,6 +29,7 @@ window.addEventListener('load', () => {
   element_remove(vision_menu, hanburger_menu, mask_menu, mask);
   element_remove(ceo_message_menu, hanburger_menu, mask_menu, mask);
   element_remove(company_menu, hanburger_menu, mask_menu, mask);
+  element_remove(top, hanburger_menu, mask_menu, mask);
 
   function element_remove(element, hanburger_menu, mask_menu, mask){
     element.addEventListener('click', () => {
