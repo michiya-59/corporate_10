@@ -13,6 +13,7 @@ body {
 @media screen and (max-width: 900px) {
   .header {
     padding: 20px 15px;
+    line-height: 26px;
   }
   .header .site_logo {
     width: 169px;
@@ -36,6 +37,11 @@ body {
   position: relative;
   cursor: pointer;
   transition: 0.5s;
+}
+@media screen and (max-width: 900px) {
+  .header .menu .hanburger_menu {
+    top: 7px;
+  }
 }
 .header .menu .hanburger_menu span {
   width: 30px;
@@ -73,6 +79,11 @@ body {
   height: 30px;
   color: white;
   margin-left: 16px;
+}
+@media screen and (max-width: 900px) {
+  .header .menu p {
+    line-height: 38px;
+  }
 }
 .header .mask_menu {
   position: fixed;
