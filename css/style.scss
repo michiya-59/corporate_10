@@ -1,4 +1,5 @@
 @use 'fadein' as *;
+@use 'responsive' as *;
 
 body{
   font-family: 'Bebas Neue', 'Zen Kaku Gothic New', sans-serif, cursive;
@@ -11,6 +12,17 @@ body{
   width: 100%;
   padding: 30px 60px;
   transition: .5s;
+  @include media{
+    padding: 20px 15px;
+    .site_logo{
+      width: 169px;
+      height: 20px;
+      z-index: 999;
+      a img{
+        width: 100%;
+      }
+    }
+  }
   .menu{
     width: 74px;
     margin-left: auto;
@@ -75,6 +87,9 @@ body{
     padding-top: 180px;
     pointer-events: none;
     @include fadein(translateX(1000px), 0, .5s);
+    @include media{
+      width: 100%;
+    }
     img{
       margin-bottom: 19px;
     }
@@ -120,6 +135,10 @@ body{
     position: relative;
     z-index: 10;
     overflow: hidden;
+    @include media{
+      width: 287px;
+      height: 667px;
+    }
     .mainvisual_img{
       position: relative;
       width: 100%;
@@ -129,6 +148,12 @@ body{
         transform: scale(1.13);
         object-position: left 0px top 33px;
         position: relative;
+        @include media{
+          height: 100%;
+          object-fit: cover;
+          transform: scale(1);
+          object-position: center;
+        }
       }
       &::after{
         content: '';
@@ -159,6 +184,9 @@ body{
     height: 740px;
     right: 0;
     top: 0;
+    @include media{
+      width: 283px;
+    }
   }
   .mainvisual_right_about{
     height: 463px;
@@ -171,6 +199,10 @@ body{
     color: white;
     right: 0;
     top: 0;
+    @include media{
+      margin-top: 179px;
+      margin-right: 10px;
+    }
     p:nth-child(1){
       font-size: 1.25rem;
       font-weight: bold;
@@ -197,11 +229,21 @@ body{
   padding: 0 170px;
   margin-top: 100px;
   position: relative;
+  @include media{
+    margin-top: 140px;
+    padding: 0;
+    width: 100%;
+  }
   .about_cotainer{
     background-image: url('../image/skyline-4582510_1920.png');
     width: 1100px;
     height: 590px;
     padding: 110px 60px 0 60px;
+    @include media{
+      padding: 50px 15px;
+      width: 100%;
+      height: 574px;
+    }
     .about_content{
       border-radius: 2px;
       padding: 38px 30px;
@@ -209,6 +251,10 @@ body{
       height: 370px;
       background: white;
       @include fadein(translateY(-100px), 0, 3s);
+      @include media{
+        width: 100%;
+        height: 100%;
+      }
       h1{
         font-size: 2.5rem;
         letter-spacing: 3px;
@@ -241,15 +287,26 @@ body{
     left: 0;
     top: 483px;
     z-index: -1;
+    @include media{
+      width: 100%;
+      height: 1080px;
+    }
   }
 }
 
 .works_culture{
   padding: 80px 170px 0 170px;
   overflow: hidden;
+  @include media{
+    padding: 50px 15px;
+    width: 100%;
+  }
   .works_culture_content{
     display: flex;
     justify-content: space-between;
+    @include media{
+      flex-direction: column;
+    }
     .works h1, .culture h1{
       font-size: 2.3rem;
       margin-bottom: 30px;
@@ -257,6 +314,14 @@ body{
     }
     .works.active h1, .culture.active h1{
       @include slider_fadein(translateX(0px), 2s);
+      @include media{
+        margin-top: 30px;
+      }
+    }
+    .works .image_a img, .culture .image_a img{
+      @include media{
+        width: 100%;
+      }
     }
     .works p, .culture p{
       margin: 25px 0;
@@ -286,6 +351,10 @@ body{
 .latest_topics{
   padding: 120px 170px 60px 170px;
   overflow: hidden;
+  @include media{
+    padding: 50px 15px;
+    width: 100%;
+  }
   .latest_topics_title{
     font-size: 2.1rem;
     margin-bottom: 32px;
@@ -298,6 +367,9 @@ body{
     width: 700px;
     text-align: left;
     margin-left: auto;
+    @include media{
+      width: 100%
+    }
     @include fadein(translateY(-100px), 0 ,1.3s, .8s);
     .date{
       font-family: 'Zen Kaku Gothic New';
@@ -324,6 +396,10 @@ body{
     display: block;
     padding: 10px 0;
     text-align: center;
+    @include media{
+      margin-left: 0;
+      margin-right: auto;
+    }
   }
 }
 
@@ -333,10 +409,19 @@ body{
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+  @include media{
+    padding: 50px 15px;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
   .contact_left{
     width: 440px;
     padding: 70px 0;
     overflow: hidden;
+    @include media{
+      width: 100%;
+      padding: 30px 0 0 0;
+    }
     h1{
       font-size: 2.5rem;
       letter-spacing: 2px;
@@ -359,6 +444,9 @@ body{
       @include fadein(translateY(-100px), 0 ,1.3s, .8s);
     }
   }
+  .contact_right img{
+    width: 100%
+  }
 }
 .contact.active .contact_left{
   h1{
@@ -379,11 +467,18 @@ body{
   color: white;
   font-family: 'Zen Kaku Gothic New';
   font-size: 0.8rem;
+  @include media{
+    font-size: 0.625rem;
+  }
 }
 
 .vision{
   padding: 120px 629px 120px 396px;
   @include fadein(translateY(-200px), 0 ,1.3s);
+  @include media{
+    padding: 50px 15px 80px 15px;
+    width: 100%;
+  }
   .vision_title{
     font-size: 2.15rem;
     letter-spacing: 2px;
@@ -404,8 +499,16 @@ body{
   display: flex;
   position: relative;
   @include fadein(translateY(-200px), 0 ,1.3s);
+  @include media{
+    padding: 50px 15px;
+    flex-direction: column;
+  }
   img{
     position: absolute;
+    @include media{
+      width: 340px;
+      left: 0;
+    }
   }
   .ceo_message_right{
     margin-left: auto;
@@ -416,6 +519,13 @@ body{
     padding: 120px 120px 120px 171px;
     border-radius: 3px;
     margin-bottom: 120px;
+    @include media{
+      height: 100%;
+      width: 100%;
+      margin-top: 130px;
+      margin-bottom: 0;
+      padding: 123px 25px 43px 25px;
+    }
     h1{
       font-size: 3rem;
       letter-spacing: 3px;
@@ -423,6 +533,9 @@ body{
     }
     p{
       line-height: 29px;
+      @include media{
+        line-height: 25px;
+      }
     }
   }
 }
@@ -434,6 +547,10 @@ body{
   padding: 0 170px;
   margin-bottom: 120px;
   @include fadein(translateY(-200px), 0 ,1.3s);
+  @include media{
+    padding: 50px 15px;
+    margin: 0;
+  }
   h1{
     font-size: 2.5rem;
     letter-spacing: 4px;
@@ -444,6 +561,9 @@ body{
   .company_container_top{
     width: 800px;
     margin-left: auto;
+    @include media{
+      width: 100%;
+    }
     .company_container_top_detail{
       margin-bottom: 50px;
       .company_container_top_part{
@@ -458,10 +578,16 @@ body{
           font-weight: bold;
           font-family: 'Bebas Neue';
           padding-bottom: 10px;
+          @include media{
+            width: 39%;
+          }
         }
         p:last-of-type{
           width: 28%;
           padding-bottom: 10px;
+          @include media{
+            width: 61%;
+          }
         }
       }
     }
@@ -474,20 +600,38 @@ body{
 .contact_container{
   padding: 0 370px;
   margin: 120px 0;
+  @include media{
+    padding: 50px 15px;
+    margin: 30px 0;
+  }
   .contact_description{
     margin-bottom: 55px;
   }
   .form_part_checkbox{
     margin: 15px 0px 40px 0;
     display: flex;
+    @include media{
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
     .contact_container_part, .contact_container_part2{
       width: 15%;
+      @include media{
+        display: flex;
+        width: 100%;
+        margin-bottom: 10px;
+      }
       input{
         margin-right: 9px;
       }
     }
     .contact_container_part2{
       width: 33%;
+      @include media{
+        display: flex;
+        width: 100%;
+        margin-bottom: 10px;
+      }
     }
   }
   .form_part{
