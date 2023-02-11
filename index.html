@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zen+Kaku+Gothic+New:wght@300&display=swap" rel="stylesheet">
-  <script src="js/hanburger_menu.js"></script>
+  <script src="js/hanburger/hanburger_menu.js"></script>
+  <script src="js/scroll/scroll.js"></script>
   <title></title>
 </head>
 <body>
@@ -60,8 +61,8 @@
   </section>
   <main>
     <section id="about_main" class="about">
-      <div class="about_cotainer">
-        <div class="about_content">
+      <div class="about_cotainer" id="about_cotainer">
+        <div class="about_content" id="about_content">
           <h1>ABOUT US</h1>
           <p>
             DIGSMILEは、デザインで人を笑顔にする会社。<br>
@@ -75,15 +76,15 @@
     </section>
     <section id="works_culture" class="works_culture">
       <div class="works_culture_content">
-        <div class="works">
+        <div class="works" id="works_title">
           <h1>WORKS</h1>
-          <a href="" class="image_a" id="image_a"><img src="image/work.svg" alt=""></a>
+          <a href="" class="image_a"><img src="image/work.svg" alt=""></a>
           <p>DIGSMILEの制作実績を紹介します。</p>
           <a href="" class="read_more_btn" id="read_more_btn">READ MORE</a>
         </div>
-        <div class="culture">
+        <div class="culture" id="culture_title">
           <h1>CULTURE</h1>
-          <a href="" class="image_a" id="image_a"><img src="image/culture.svg" alt=""></a>
+          <a href="" class="image_a"><img src="image/culture.svg" alt=""></a>
           <p>DIGSMILEの社内文化について紹介します。</p>
           <a href="" class="read_more_btn" id="read_more_btn">READ MORE</a>
         </div>
@@ -107,7 +108,7 @@
       </div>
       <a href="" class="read_more_btn">READ MORE</a>
     </section>
-    <section id="contact" class="contact">
+    <section id="contact_main" class="contact">
       <div class="contact_left">
         <h1>CONTACT</h1>
         <p>制作の依頼、取材の依頼、IRや採用についての連絡・お問い合わせはコンタクトページから承っております。
